@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+        xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
             name="person"
-            type="xiaomeng.bupt.com.learnproject.bean.Person" />
+            type="xiaomeng.bupt.com.learnproject.bean.Person"/>
 
         <variable
             name="presenter"
-            type="xiaomeng.bupt.com.learnproject.MainActivity.Presenter" />
+            type="xiaomeng.bupt.com.learnproject.MainActivity.Presenter"/>
     </data>
 
     <LinearLayout
@@ -27,13 +27,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{() -> presenter.onClickListener(person)}"
-            android:text="@{person.mName}" />
+            android:text="@{person.mName}"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{person.mAge}" />
+            android:text="@{person.mAge}"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onTextChanged ="@{presenter.onTextChanged}"
+            android:inputType="text"
+            />
     </LinearLayout>
 
 </layout>
