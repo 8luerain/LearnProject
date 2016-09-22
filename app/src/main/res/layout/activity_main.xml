@@ -3,11 +3,6 @@
         xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
-        <variable
-            name="person"
-            type="xiaomeng.bupt.com.learnproject.bean.Person"/>
-
         <variable
             name="presenter"
             type="xiaomeng.bupt.com.learnproject.MainActivity.Presenter"/>
@@ -24,22 +19,24 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="xiaomeng.bupt.com.learnproject.MainActivity">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{person.mName}"/>
 
-        <TextView
+        <Button
+            android:text="Recycler"
+            android:onClick="@{() -> presenter.onRecycleButtonClick()}"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{person.mAge}"/>
+            android:layout_height="wrap_content"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onTextChanged ="@{presenter.onTextChanged}"
-            android:inputType="text"
-            />
+        <Button
+            android:text="TwoWayBinding"
+            android:onClick="@{() -> presenter.onTwoBindingButtonClick()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="ExpressionActivity"
+            android:onClick="@{() -> presenter.onExpressionButtonClick()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </layout>
